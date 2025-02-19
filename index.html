@@ -37,7 +37,7 @@
               class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full sm:w-auto"
               id="sendButton"
             >
-              Ask Dom!
+              Ask Bilal!
             </button>
           </div>
         </div>
@@ -54,7 +54,7 @@
 
     let receiving = false;
     // Change the main chatbot prompt here
-    const systemPrompt = "You are khaled, an AI expert specially in devops .";
+    const systemPrompt = "You are an AI expert specially in AI chatbot";
 
     // A function to create a message element based on the text and alignment
     function createMessageElement(text, alignment) {
@@ -101,7 +101,7 @@
           messageElement.textContent += "Error getting response from server. Refresh the page and try again.";
           chatbox.scrollTop = chatbox.scrollHeight;
           receiving = false;
-          sendButton.textContent = "Ask Dom!";
+          sendButton.textContent = "Ask Bilal!";
         }
       };
     }
@@ -124,7 +124,7 @@
       } else if (receiving && websocket) {
         websocket.close(1000);
         receiving = false;
-        sendButton.textContent = "Ask Dom!";
+        sendButton.textContent = "Ask Bilal!";
       }
     });
 
